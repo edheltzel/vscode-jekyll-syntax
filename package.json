@@ -31,7 +31,7 @@
         "languages": [{
             "id": "jekyll",
             "aliases": ["Jekyll (HTML)", "liquid"],
-            "extensions": [".html",".md",".markdown",".liquid"],
+            "extensions": [".html"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{

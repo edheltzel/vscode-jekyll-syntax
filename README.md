@@ -12,7 +12,7 @@ I'm using this as a basis to add Jekyll specific syntax highlighting support - f
 
 ### Theme support
 
-Front-Matter support in VSCode color schemes is limited. 
+Front-Matter support in VSCode color schemes is limited, currently, but hopefully that changes over time. You can check out the two VSCode color themes/schemes below to see the improvements: 
 
 * **Better Solarized Dark**
   *  [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme)
@@ -21,7 +21,7 @@ Front-Matter support in VSCode color schemes is limited.
   *  [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-onedark-raincoat-theme)
   *  [Repo](https://github.com/ginfuru/vscode-onedark-raincoat)
 
-If you wanna add support to your color scheme add the following to your color schemes `.json` file
+If you'd like to add support to your color scheme add the following to your color schemes `.json` file
 
 ```json
     {
@@ -29,7 +29,7 @@ If you wanna add support to your color scheme add the following to your color sc
       "scope": [
         "punctuation.output.jekyll",
         "punctuation.tag.jekyll",
-        "punctuation.frontmatter.jekyll"
+        "frontmatter.jekyll"
       ],
       "settings": {
         "foreground": "#SOME_COLOR_YOU_LINK"
@@ -51,11 +51,15 @@ If you wanna add support to your color scheme add the following to your color sc
     {
       "name": "Jekyll Front Matter",
       "scope": [
-        "punctuation.frontmatter.jekyll"
+        "frontmatter.jekyll"
       ],
       "settings": {
         "foreground": "#SOME_COLOR_YOU_LINK"
       }
     },
 ```
+### TODO:
 
+- [ ] add pictures
+- [ ] add Jekyll JSON
+- [ ] add Jekyll XML 

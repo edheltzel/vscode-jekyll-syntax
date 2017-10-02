@@ -22,7 +22,7 @@
 			]
 		},
 		{
-			"name": "punctuation.frontmatter.jekyll",
+			"name": "frontmatter.jekyll",
 			"begin": "----?",
 			"end": "-?---",
 			"patterns": [
