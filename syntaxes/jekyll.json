@@ -1,0 +1,192 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Jekyll (HTML)",
+	"scopeName": "text.html.jekyll",
+	"fileTypes": [
+		"jekyll"
+	],
+	"patterns": [
+		{
+			"name": "comment.block.jekyll",
+			"begin": "{%-?\\s*comment\\s*-?%}",
+			"end": "{%-?\\s*endcomment\\s*-?%}"
+		},
+		{
+			"name": "punctuation.output.jekyll",
+			"begin": "{{-?",
+			"end": "-?}}",
+			"patterns": [
+				{
+					"include": "#template_var"
+				}
+			]
+		},
+		{
+			"name": "punctuation.frontmatter.jekyll",
+			"begin": "----?",
+			"end": "-?---",
+			"patterns": [
+				{
+					"include": "source.yaml"
+				}
+			]
+		},
+		{
+			"name": "punctuation.tag.jekyll",
+			"begin": "{%-?",
+			"end": "-?%}",
+			"patterns": [
+				{
+					"include": "#template_tag_name"
+				},
+				{
+					"include": "#template_var"
+				}
+			]
+		},
+		{
+			"include": "text.html.basic"
+		}
+	],
+	"repository": {
+		"assign_op": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assignment.augmented.jekyll",
+					"match": "/="
+				}
+			]
+		},
+		"logic_expression": {
+			"patterns": [
+				{
+					"match": "/=",
+					"name": "keyword.operator.assignment.augmented.jekyll"
+				}
+			]
+		},
+		"logic_op": {
+			"patterns": [
+				{
+					"name": "keyword.operator.logical.jekyll",
+					"match": "\\s+(and|or|not|contains|(\\!\\=|\\=\\=|<\\=|>\\=|<|>)\\s+"
+				}
+			]
+		},
+		"template_tag_name": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.jekyll",
+					"match": "(?<={%)\\s*(\\w+)"
+				},
+				{
+					"name": "entity.name.tag.jekyll",
+					"match": "(?<={%-)\\s*(\\w+)"
+				}
+			]
+		},
+		"template_var": {
+			"patterns": [
+				{
+					"match": "(\\[)(\\|)(?=[^\\]]*)(?=\\])",
+					"captures": {
+						"2": {
+							"name": "invalid.illegal.filter.jekyll"
+						},
+						"3": {
+							"name": "invalid.illegal.filter.jekyll"
+						}
+					}
+				},
+				{
+					"name": "invalid.illegal.filter.jekyll",
+					"match": "(?<=\\s)(\\+|\\-|\\/|\\*)(?=\\s)"
+				},
+				{
+					"name": "constant.language.jekyll",
+					"match": "(false|true|nil)"
+				},
+				{
+					"match": "(?=if|unless|elsif)\\s*[^%}]+\\s(in)\\s",
+					"captures": {
+						"3": {
+							"name": "invalid.illegal.operator.jekyll"
+						}
+					}
+				},
+				{
+					"name": "keyword.operator.jekyll",
+					"match": "\\s+(and|or|not|contains|in|by|((\\!|\\=|\\<|\\>)\\=))\\s+"
+				},
+				{
+					"match": "(?<=assign)([^\\=]+)(\\=\\=+)",
+					"captures": {
+						"2": {
+							"name": "invalid.illegal.assignment.jekyll"
+						}
+					}
+				},
+				{
+					"name": "support.function.with-args.jekyll",
+					"match": "\\|\\s+(?![\\.0-9])[a-zA-Z0-9_-]+\\:\\s+"
+				},
+				{
+					"name": "support.function.without-args.jekyll",
+					"match": "\\|\\s+(?![\\.0-9])[a-zA-Z0-9_-]+\\s+"
+				},
+				{
+					"name": "keyword.control.jekyll",
+					"match": "(?<=\\s)(with|offset\\:|limit\\:)(?=\\s)"
+				},
+				{
+					"match": "(?<=include)(.*)(with\\:|offset|limit)(?=\\s)",
+					"captures": {
+						"2": {
+							"name": "invalid.illegal.argument.jekyll"
+						}
+					}
+				},
+				{
+					"name": "invalid.illegal.jekyll",
+					"match": "(?<=\\s)(\\w+\\:)(?=\\:\\s)"
+				},
+				{
+					"name": "string.quoted.double.jekyll",
+					"begin": "\"",
+					"end": "\""
+				},
+				{
+					"name": "string.quoted.single.jekyll",
+					"begin": "'",
+					"end": "'"
+				},
+				{
+					"name": "constant.numeric.jekyll",
+					"match": "(-|\\+)?\\s*[0-9]+(\\.[0-9]+)?"
+				},
+				{
+					"name": "support.class.jekyll",
+					"match": "\\b(collection|product|linklist|linklists|order|link|customer|customer_address|line_item|shop|collections|page_title|template|image|blog|blogs|cart|pages|theme|themes|variant|items|comment|forloop|settings)\\b"
+				},
+				{
+					"name": "support.class.jekyll",
+					"match": "\\b(assets|author|body|body_raw|current|date|excerpt_raw|meta|next|pages|parent|posts|previous|site|tags|taxonomy|title|url)\\b"
+				},
+				{
+					"name": "variable.parameter.jekyll",
+					"match": "((?<=\\w\\:\\s)\\w+)"
+				},
+				{
+					"name": "support.variable.jekyll",
+					"match": "(?<=\\.)\\w+\\b"
+				},
+				{
+					"name": "variable.other.jekyll",
+					"match": "\\w+"
+				}
+			]
+		}
+	},
+	"foldingStartMarker": "(?x){%\\s*(if|unless|for|paginate|capture|form|case|tablerow|raw|comment)[^(%})]+%}",
+	"foldingStopMarker": "(?x){%\\s*(endif|endunless|endfor|endpaginate|endcapture|endform|endcase|endtablerow|endraw|endcomment)[^(%})]+%}"
+}
