@@ -1,6 +1,6 @@
 # <a href="http://jekyllrb.com" title="Jekyll" target="_blank"><img src="https://github.com/ginfuru/vscode-jekyll-syntax/blob/master/images/jekyll-logo.png" atl="Jekyll Logo" width="250"></a> syntax package for Visual Studio Code.
 
-[![GitHub release](https://img.shields.io/github/release/ginfuru/vscode-jekyll-lang.svg)](https://github.com/ginfuru/vscode-jekyll-lang/releases)
+[![GitHub release](https://img.shields.io/github/release/ginfuru/vscode-jekyll-syntax.svg)](https://github.com/ginfuru/vscode-jekyll-syntax/releases)
 
 ### Inspired by [jekyll-atom](https://github.com/Arcath/jekyll-atom)
 
