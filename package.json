@@ -2,7 +2,7 @@
     "name": "ginfuru-vscode-jekyll-syntax",
     "displayName": "Jekyll Syntax Support",
     "description": "Jekyll Syntax Highlighting for Visual Studio Code",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "ginfuru",
     "engines": {
         "vscode": "^1.16.0"
@@ -28,16 +28,25 @@
     },
     "bugs": "https://github.com/ginfuru/vscode-jekyll-syntax",
     "contributes": {
-        "languages": [{
-            "id": "jekyll",
-            "aliases": ["Jekyll (HTML)", "liquid"],
-            "extensions": [".html"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "jekyll",
-            "scopeName": "text.html.jekyll",
-            "path": "./syntaxes/jekyll.json"
-        }]
+        "languages": [
+            {
+                "id": "jekyll",
+                "aliases": [
+                    "Jekyll (HTML)",
+                    "liquid"
+                ],
+                "extensions": [
+                    ".html"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "jekyll",
+                "scopeName": "text.html.jekyll",
+                "path": "./syntaxes/jekyll.json"
+            }
+        ]
     }
 }
