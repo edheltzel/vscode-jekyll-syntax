@@ -12,7 +12,7 @@ I'm using this as a basis to add Jekyll specific syntax highlighting support - f
 
 ### Theme support
 
-Front-Matter support in VSCode color schemes is limited, currently, but hopefully that changes over time. You can check out the two VSCode color themes/schemes below to see the improvements: 
+~~Front-Matter support in VSCode color schemes is limited, currently, but hopefully that changes over time. You can check out the two VSCode color themes/schemes below to see the improvements:~~ **With the edition of the include `source.yaml`** color scheme/theme support is pretty universal.
 
 * **Better Solarized Dark**
   *  [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-better-solarized-dark-theme)
