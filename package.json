@@ -36,9 +36,9 @@
                     "liquid"
                 ],
                 "extensions": [
-                    ".html"
+                    ".jekyll"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./jekyll.language-configuration.json"
             }
         ],
         "grammars": [
