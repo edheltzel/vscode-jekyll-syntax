@@ -10,6 +10,19 @@ So this plugin was inspired by [@Arcath](https://github.com/Arcath)'s Atom plugi
 
 I'm using this as a basis to add Jekyll specific syntax highlighting support - for those curious as to why a new plugin... well that's because I plan on adding more that just front-matter support.
 
+### Using Emmet 
+
+If you want to use Emmet with `Jekyll (HTML)` you'll need to add the below to your users settings or workspace settings _(the `scss` part is optional)_: 
+
+```yaml
+  "emmet.includeLanguages":{
+    "jekyll": "html",
+    "scss": "css
+  }
+```
+
+
+
 ### Theme support
 
 ~~Front-Matter support in VSCode color schemes is limited, currently, but hopefully that changes over time. You can check out the two VSCode color themes/schemes below to see the improvements:~~ **With the edition of the include `source.yaml`** color scheme/theme support is pretty universal.
