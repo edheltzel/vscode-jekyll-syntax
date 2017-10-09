@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.0.5 | 10-02-2017
+- Fixes issue #1 reported by @xwLyc where the native HTML file association was hijacked by the extension
+
 ## 0.0.4 | 10-02-2017
 - Update readme 
 
