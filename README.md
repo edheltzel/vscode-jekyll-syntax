@@ -17,7 +17,7 @@ If you want to use Emmet with `Jekyll (HTML)` you'll need to add the below to yo
 ```yaml
   "emmet.includeLanguages":{
     "jekyll": "html",
-    "scss": "css
+    "scss": "css"
   }
 ```
 
