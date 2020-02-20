@@ -1,8 +1,8 @@
 <div align="center">
 <h1>Deprecated</h1>
-Starting to decommission this project in favor of [Liquid Language Support](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) by [panoply](https://github.com/panoply), it has a lot of great features.
 </div>
 
+Starting to decommission this project in favor of [Liquid Language Support](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) by [panoply](https://github.com/panoply), it has a lot of great features.
 
 # <a href="http://jekyllrb.com" title="Jekyll" target="_blank"><img src="https://raw.githubusercontent.com/ginfuru/vscode-jekyll-syntax/master/images/jekyll-logo.png" atl="Jekyll Logo" width="250"></a> syntax package for Visual Studio Code.
 
